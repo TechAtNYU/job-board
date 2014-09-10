@@ -1,0 +1,23 @@
+---
+layout: default
+title: welcome
+---
+<section class="intro">
+<div class="site">
+{% capture intro %}
+  {% include intro.markdown %}
+{% endcapture %}
+{{ intro | unindent | markdownify }}
+</div>
+</section>
+
+
+
+<section class="blog" id="welcome">
+<div class="site">
+{% for post in site.posts %}
+	<h2><a href="{{post.url}}">{{post.title}}</a></h2>
+{% endfor %}
+	
+</div>
+</section>
