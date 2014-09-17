@@ -22,7 +22,17 @@ title: welcome
 	
 	<h4>{{job.location}}</h4>
 	
-	<p>{{job.content}}</p>
+	{{ job.content | markdownify }}
+	
+	<h3>Position</h3>
+	
+	{{job.positionLevel}}
+	
+	<h3>How to apply</h3>
+	
+	<a href="#">{{job.applicationUrl}}</a>
+	
+	<p>Please email {{job.applicationEmail}}</p>
 	
 {% endfor %}
 

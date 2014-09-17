@@ -1,0 +1,63 @@
+---
+layout: base
+title: Startup Week Partner Prospectus
+---
+<div class="startup__mask">
+	<img src="/lib-sw/img/crane-side.png" /> <!-- Needs to be in the markup to print. -->
+	<h1 class="startup__one">Startup<br> Week</h1>
+</div>
+
+<section class="intro">
+    <img src="/lib-sw/logos/techatnyu.png" alt="tech@nyu" class="logo" />
+    <div class="info">
+      <p class="description">The leading gathering of students at the intersection of technology, entrepreneurship, and design.</p>
+
+      <ul>
+          <li>November 1-9, 2014</li><li>New York City</li>
+      </ul>    
+      
+      <h2 class="h3 subtitle">Partnership Prospectus</h2>
+    </div>
+</section>
+
+
+<section class="join">
+{% capture join %}
+  {% include join-us.markdown %}
+{% endcapture %}
+{{ join | unindent | markdownify }}
+</section>
+
+<section class="who">
+{% capture who %}
+  {% include who-comes.markdown %}
+{% endcapture %}
+{{ who | unindent | markdownify }}
+  <div class="eboard">
+  {% capture eboard %}
+    {% include eboard.markdown %}
+  {% endcapture %}
+  {{ eboard | unindent | markdownify }}
+  </div>
+</section>
+
+<section class="happening">
+{% capture happening %}
+  {% include happening.markdown %}
+{% endcapture %}
+{{ happening | unindent | markdownify }}
+</section>
+
+<section class="involved">
+	<h2>Great, how do we get involved?</h2>
+	
+	{{ content }}
+
+	<a href="mailto:hello@techatnyu.org" class="email__techatnyu interactive">Start the Conversation</a>
+</section>
+
+<section class="supporters">
+  <h2> Prior Supporters Include...</h2>
+  <!-- can't have any spacing between these ugh. thanks display:inline-block; -->
+  <img src="/lib-sw/logos/ebay.png" alt="eBay" class="two-n-plus-oneth three-n-plus-oneth" /><img src="/lib-sw/logos/firstmark.png" alt="FirstMark Capital" /><img src="/lib-sw/logos/square.png" alt="Square" class="two-n-plus-oneth" /><img src="/lib-sw/logos/quirky.jpg" alt="Quirky" class="three-n-plus-oneth" /><img src="/lib-sw/logos/goodwin-procter.jpeg" alt="Goodwin Procter"  class="two-n-plus-oneth" /><img src="/lib-sw/logos/omgpop.jpg" alt="OMGPop" /><img src="/lib-sw/logos/ivp.jpg" alt="Insight Venture Partners" /><img src="/lib-sw/logos/jobfair.png" alt="Startup Job Fair" />
+</section>

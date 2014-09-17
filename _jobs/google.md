@@ -2,6 +2,10 @@
 title: Software Engineer, Machine Learning & Artificial Intelligence, Mountain View
 company: Google
 location: Mountain View, CA
+category: Engineering
+positionLevel: Fulltime
+applicationUrl: http://google.com
+applicationEmail: hello@google.com
 ---
 
 For immediate consideration, please apply at the following URL:http://goo.gl/R75PTd
