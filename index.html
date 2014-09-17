@@ -14,26 +14,24 @@ title: welcome
 <div class="site">
 
 {% for job in site.jobs %}
-
-	<h2>{{job.title}}</h2>
-	
-
-	<h5>{{job.company}}</h5>
-	
-	<h4>{{job.location}}</h4>
-	
-	{{ job.content | markdownify }}
-	
-	<h3>Position</h3>
-	
-	{{job.positionLevel}}
-	
-	<h3>How to apply</h3>
-	
-	<a href="#">{{job.applicationUrl}}</a>
-	
-	<p>Please email {{job.applicationEmail}}</p>
-	
+	<article class="job__listing">
+		<h2 class="job__title">{{job.title}} - {{job.company}}</h2>
+		
+    	
+		<h4>{{job.location}}</h4>
+		
+		{{ job.content | markdownify }}
+		
+		<h3>Position</h3>
+		
+		{{job.category}} {{job.positionLevel}}
+		
+		<h3>How to apply</h3>
+		
+		<a href="{{job.applicationUrl}}">{{job.applicationUrl}}</a>
+		
+		<p>Please email {{job.applicationEmail}}</p>
+	</article>
 {% endfor %}
 
 </div>

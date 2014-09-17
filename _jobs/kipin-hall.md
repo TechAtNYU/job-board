@@ -2,6 +2,10 @@
 title: Web Developer
 company: Kipin Hall
 location: New York, NY
+category: Engineering
+positionLevel: Intern
+applicationUrl: http://kipinhall.com
+applicationEmail: info@kipinhall.com
 ---
 
 Kipin Hall is a new education platform that recently won an award as the next generation education app. Our platform helps students stay in school and improve their chances of graduation. 

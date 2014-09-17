@@ -66,22 +66,23 @@ h6 {
   margin-bottom: .1em;
 }
 h1 {
-  font-size: 2.5em;
-}
-h2 {
-  font-size: 2.25em;
-}
-h3 {
   font-size: 2em;
 }
+h2 {
+  font-size: 1.8em;
+  font-family: "metablack-romanregular";
+}
+h3 {
+  font-size: 1.6em;
+}
 h4 {
-  font-size: 1.75em;
+  font-size: 1.4em;
 }
 h5 {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 h6 {
-  font-size: 1.25em;
+  font-size: 1.1em;
 }
 hr {
   clear: both;
@@ -183,27 +184,27 @@ footer .colophon {
   clear: both;
   text-align: right;
 }
-header.main {
-  background: black;
+.logo__jobs {
+  padding: 1em;
+  text-align: right;
 }
-header.main a {
-  color: white;
+.logo__jobs img {
+  width: 50%;
+  max-width: 20em;
 }
-header.main h1 {
-  font-size: 10em;
+.job__company {
+  font-family: "metablack-romanregular";
+}
+.job__listing {
+  margin-bottom: 5em;
 }
 footer {
   background: #cccccc;
 }
-@media only screen and (min-width: 40em) {
-  .site p {
-    font-size: 125%;
-  }
-}
 @media only screen and (min-width: 70em) {
   .site {
     max-width: 50em;
-    width: 65%;
+    width: 50%;
     font-size: 125%;
   }
 }
