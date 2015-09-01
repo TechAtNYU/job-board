@@ -4,7 +4,7 @@ company: C4Q
 location: Queens, NY
 category: Engineering
 positionLevel: Intern
-applicationUrl: http://c4q.nyc/
+applicationUrl: http://www.c4q.nyc/internship-opportunities/
 applicationEmail: hello@c4q.nyc
 ---
 
@@ -16,4 +16,4 @@ What’s needed is a blueprint for a new kind of innovation hub, one that embrac
 
 We are a small but growing team in which you would be an important and integral member. Available positions range widely from Education Programs Intern to Technical Intern. 
 
-To learn more visit our website (http://www.c4q.nyc/) and apply at http://www.c4q.nyc/internship-opportunities/. 
+To learn more visit our [website](http://www.c4q.nyc/).
