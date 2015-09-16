@@ -20,6 +20,10 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face { 
+	font-family: 'merriweather-bold';
+	src: url('/lib/fonts/Merriweather-Bold.ttf');
+}
 /* -- FLUID GRID STYLES -- */
 .grid {
   text-align: justify;
@@ -67,6 +71,8 @@ h6 {
 }
 h1 {
   font-size: 2em;
+	font-family: "merriweather-bold";
+	color: #152a5b;
 }
 h2 {
   font-size: 1.8em;
@@ -74,9 +80,12 @@ h2 {
 }
 h3 {
   font-size: 1.6em;
+	color: #152a5b;
+	font-family: "merriweather-bold";
 }
 h4 {
   font-size: 1.4em;
+	color: #d7552d;
 }
 h5 {
   font-size: 1.2em;
@@ -98,10 +107,10 @@ a {
 a:link,
 a:visited,
 a:active {
-  color: #b21455;
+  color: #65408b;
 }
 a:hover {
-  color: #ea4287;
+  color: #65408b;
 }
 blockquote {
   margin: 1.5em;
@@ -121,18 +130,18 @@ body {
   background: #ffffff;
 }
 ::selection {
-  background: #b21455;
+  background: #65408b;
   /* Safari */
 }
 ::-moz-selection {
-  background: #b21455;
+  background: #65408b;
   /* Firefox */
 }
 .container {
   width: 100%;
   margin: 0 auto;
 }
-.site {
+.site, .site_footer {
   margin: 0 auto;
 }
 .content {
@@ -173,6 +182,46 @@ header.main li {
 header.main a:hover {
   text-decoration: none;
 }
+header { 
+	margin: 0 auto;
+	z-index: 1000;
+	position: fixed;
+	background-color: white;
+	width: 100%;
+	padding: 0px 10px 20px 0px;
+}
+
+header img.logo { 
+	width: 200px;
+	height: auto;
+	padding: 14px 0px 0px 27px;
+	margin: 0;
+}
+
+header svg { 
+	width: 55px;
+	height: auto;
+	float: right;
+	padding: 14px 27px 0px 0px;
+}
+ 
+header div.logo_calendar { 
+	display: inline;	
+}
+
+header div.description { 
+	margin: 0;	
+}
+
+header p.description { 
+	padding-left: 27px;
+	margin: 0;
+	color: #d7552d;
+}
+
+header .calendar { 
+	fill: #65408b;
+}
 .posts li {
   padding: 1em 0;
 }
@@ -181,7 +230,8 @@ footer {
   padding: .5em 0;
 }
 footer .colophon {
-  clear: both;
+  margin: 4em 1em;
+	clear: both;
   text-align: right;
 }
 .logo__jobs {
@@ -196,30 +246,42 @@ footer .colophon {
   font-family: "metablack-romanregular";
 }
 .job__listing {
-  margin-bottom: 5em;
+	margin-bottom: 5em;
 }
 footer {
   background: #cccccc;
 }
 @media only screen and (min-width: 70em) {
-  .site {
-    max-width: 50em;
+  .site, .site_footer {
+    padding-top: 94px;
+		max-width: 50em;
     width: 50%;
     font-size: 125%;
   }
+	.site_footer { 
+		padding-top: 0;	
+	}
 }
 @media only screen and (min-width: 50em) and (max-width: 70em) {
-  .site {
+  .site, .site_footer {
     max-width: 45em;
     width: 75%;
+		padding-top: 94px;
   }
+	.site_footer { 
+		padding-top: 0;
+	}
 }
 @media only screen and (min-width: 40em) and (max-width: 50em) {
-  .site {
+  .site, .site_footer {
     width: 90%;
     max-width: 45em;
     font-size: .85em;
-  }
+		padding-top: 76px;
+	}
+	.site_footer { 
+		padding-top: 0;
+	}
 }
 @media only screen and (min-width: 30em) and (max-width: 70em) {
   .grid li {
@@ -236,11 +298,14 @@ footer {
   }
 }
 @media only screen and (max-width: 40em) {
-  .site {
-    padding: 1em;
+  .site, .site_footer {
+    padding: 5.3em 1em 1em;
     width: 100%;
     font-size: .85em;
-  }
+	}
+	.site_footer { 
+		padding: 1em;
+	}
 }
 @media print {
   @page {
