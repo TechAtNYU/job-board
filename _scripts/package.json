@@ -27,7 +27,8 @@
     "sinon": "1.10.2",
     "sinon-chai": "2.5.x",
     "supertest": "~0.8.2",
-    "html-to-text": "1.3.1"
+    "html-to-text": "1.3.1",
+    "q": "1.4.1"
   },
   "scripts": {
     "test": "mocha $(find test -name \"*.js\")"
