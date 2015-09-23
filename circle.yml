@@ -9,11 +9,14 @@ machine:
   ruby:
     version:
       2.0.0
+  node:
+    version: 
+      0.10.22
 
 dependencies:
   post:
     - gem install jekyll
-    - cd $HOME/$CIRCLE_PROJECT_REPONAME/ && jekyll build
+    - cd $HOME/$CIRCLE_PROJECT_REPONAME/_scripts && npm install && node process.js
 
 test:
   override:
