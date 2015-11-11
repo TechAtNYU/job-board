@@ -1,5 +1,5 @@
 <div cg-busy="{promise: loadingPromise, templateUrl: 'partials/loadingtemplate.html'}">
-    <div ng-if="job">
+    <div ng-if="job && job.attributes.isApproved == true">
         <section id="job">
             <h3 class="job__title">{{job.attributes.positionTitle}}</h3>
             <p ng-bind-html="job.attributes.description"></p>
