@@ -1,8 +1,10 @@
 <div cg-busy="{promise: loadingPromise, templateUrl: 'partials/loadingtemplate.html'}">
     <div ng-if="job && job.attributes.isApproved == true">
         <section id="job">
-            <h3 class="job__title">{{job.attributes.positionTitle}}</h3>
+            <h4 class="job__title">{{job.attributes.positionTitle}}</h4>
+            <p>{{job.attributes.category}}, {{job.attributes.positionLevel}}</p>
             <p ng-bind-html="job.attributes.description"></p>
+            <p><a ng-if="job.attributes.applicationUrl" href="{{job.attributes.applicationUrl}}" target="_blank">Apply</a>, <a ng-if="job.attributes.applicationEmail" href="mailto:{{job.attributes.applicationEmail}}?subject=Tech@NYU - {{job.attributes.positionTitle}}" "email me">Contact</a></p>
         </section>
     </div>
 </div>

@@ -2,7 +2,8 @@
     <div ng-if="jobs">
         <section id="jobs">
             <div ng-repeat="job in jobs">
-                <h3 class="job__title"><a ui-sref="job({id: job.id})">{{job.attributes.positionTitle}}</a></h3>
+                <h4 class="job__title"><a ui-sref="job({id: job.id})">{{job.attributes.positionTitle}}</a></h4>
+                <p>{{job.attributes.category}}, {{job.attributes.positionLevel}}</p>
                 <p ng-bind-html="job.attributes.description | firstSentence"></p>
             </div>
         </section>
