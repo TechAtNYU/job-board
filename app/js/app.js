@@ -3,9 +3,8 @@
 angular.module('app.services', ['restangular']);
 angular.module('app.controllers', ['app.services']);
 angular.module('app',
-            ['ngSanitize', 'ui.router', 'ui.bootstrap',
-            'restangular',
-            'app.services', 'app.directives',
+            ['ngSanitize', 'ui.router','restangular', 
+            'ui.select', 'app.services', 'app.directives',
             'app.controllers', 'app.filters', 'cgBusy',
             ]).config(function(RestangularProvider) {
     RestangularProvider.setBaseUrl('https://api.tnyu.org/v3');
@@ -48,6 +47,4 @@ angular.module('app',
         });
         return data;
     });
-}).config(function(datepickerConfig) {
-    datepickerConfig.showWeeks = false;
 });
