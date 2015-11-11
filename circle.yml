@@ -13,6 +13,6 @@ test:
 
 deployment:
   production:
-    branch: master
+    branch: v3
     commands:
       - turbolift -u $RAXUSER -a $RAXAPIKEY --os-rax-auth $RAXREGION upload -s $HOME/$CIRCLE_PROJECT_REPONAME/app -c $CONTAINER
