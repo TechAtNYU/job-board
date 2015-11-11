@@ -2,11 +2,18 @@
 
 angular.module('app.services', ['restangular']);
 angular.module('app.controllers', ['app.services']);
-angular.module('app',
-            ['ngSanitize', 'ui.router','restangular', 
-            'ui.select', 'app.services', 'app.directives',
-            'app.controllers', 'app.filters', 'cgBusy',
-            ]).config(function(RestangularProvider) {
+angular.module('app', [
+            'ngSanitize',
+            'ui.router',
+            'ui.bootstrap',
+            'restangular',
+            'ui.select',
+            'app.filters',
+            'app.services',
+            'app.directives',
+            'app.controllers',
+            'cgBusy',
+]).config(function(RestangularProvider) {
     RestangularProvider.setBaseUrl('https://api.tnyu.org/v3');
     // Configuring Restangular to work with JSONAPI spec
     RestangularProvider.setDefaultHeaders({
@@ -47,4 +54,6 @@ angular.module('app',
         });
         return data;
     });
+}).config(function (datepickerConfig) {
+    datepickerConfig.showWeeks = false;
 });
