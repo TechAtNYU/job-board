@@ -1,6 +1,8 @@
 name: job board
 markdown: redcarpet
 
+exclude: ["bower_components", "bower.json"]
+
 collections:
   jobs:
     output: true
