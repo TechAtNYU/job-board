@@ -1,0 +1,11 @@
+<div cg-busy="{promise: loadingPromise, templateUrl: 'partials/loadingtemplate.html'}">
+    <div ng-if="jobs">
+        <section id="filters">
+            <select id="positionLevelFilter"
+                ng-model="filter.positionLevelFilter"
+                ng-options="m for m in filter.positionLevelFilters">
+                <option value="" disabled selected ng-hide="filter.positionLevelFilter">Position</option>
+            </select>
+        </section>
+    </div>
+</div>

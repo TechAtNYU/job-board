@@ -6,7 +6,14 @@ angular.module('app')
     $stateProvider
         .state('index', {
             url: '/',
-            templateUrl: 'partials/jobs.html',
+            views: {
+                'jobs': {
+                    templateUrl: 'partials/jobs.html'
+                },
+                'filters': {
+                    templateUrl: 'partials/filters.html'
+                }
+            },
             controller: 'MainCtrl'
         })
         .state('job', {
