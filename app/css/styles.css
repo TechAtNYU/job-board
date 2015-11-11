@@ -451,3 +451,11 @@ div.m-dropdown.ng-invalid-required div.dropdown-root div.dropdown-label {
   background-color: #FFEEEE ;
   color: #CC0000 ;
 }
+
+.filters section {
+  display:inline;
+}
+
+.filters a {
+  text-decoration: none;
+}
