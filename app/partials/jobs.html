@@ -1,5 +1,7 @@
+
 <div cg-busy="{promise: loadingPromise, templateUrl: 'partials/loadingtemplate.html'}">
     <div ng-if="jobs">
+        <section ng-include src="'/partials/filters.html'"></section></br>
         <section id="jobs">
             <div ng-repeat="job in jobs">
                 <h4 class="job__title"><a ui-sref="job({id: job.id})">{{job.attributes.positionTitle}}</a></h4>

@@ -324,3 +324,14 @@ footer {
     font-size: 48px !important;
   }
 }
+a[ng-click] {
+  color: red ;
+  cursor: pointer ;
+  text-decoration: underline ;
+}
+.filters section {
+  display:inline;
+}
+.filters a {
+  text-decoration: none;
+}

@@ -5,7 +5,6 @@ angular.module('app.controllers', ['app.services']);
 angular.module('app', [
             'ngSanitize',
             'ui.router',
-            'ui.bootstrap',
             'restangular',
             'ui.select',
             'app.filters',
@@ -54,6 +53,4 @@ angular.module('app', [
         });
         return data;
     });
-}).config(function (datepickerConfig) {
-    datepickerConfig.showWeeks = false;
 });
