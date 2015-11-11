@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Tech@NYU Job Board</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/cgross/angular-busy/master/dist/angular-busy.min.css">
+
+    <!-- Typescript -->
+    <script src="https://use.typekit.net/bpm7cfb.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <!-- Crossdomain -->
+    <script src="http://cdn.rawgit.com/jpillora/xdomain/0.6.15/dist/0.6/xdomain.min.js" slave="https://api.tnyu.org/v3/proxy.html"></script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.3.1/lodash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-sanitize.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/restangular/1.3.1/restangular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.11.2/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://cdn.rawgit.com/cgross/angular-busy/master/dist/angular-busy.min.js"></script>
+
+    <!-- User Defined Libraries -->
+    <script src="/js/lib/extensions.js"></script>
+    
+    <!-- User Defined JavaScript -->
+    <script src="/js/app.js"></script>
+    <script src="/js/routes.js"></script>
+    <script src="/js/directives.js"></script>
+    <script src="/js/filters.js"></script>
+
+    <!-- Angular Controllers -->
+    <script src="/js/controllers/job-ctrl.js"></script>
+    <script src="/js/controllers/jobs-ctrl.js"></script>
+    <script src="/js/controllers/main-ctrl.js"></script>
+</head>
+
+<body ng-app="app" ng-controller="JobBoardCtrl">
+    <div class="container">
+        <header class="main" id="top">
+            <div class="logo_calendar">
+                <img src="/logos/techatnyu.png" alt="tech@nyu logo" class="logo"/>
+                <a href="http://cal.techatnyu.org/" target="_blank">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="595.28px" height="841.89px" viewBox="0 0 595.28 841.89" enable-background="new 0 0 595.28 841.89" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path class="calendar" fill="#010002" d="M156.47,628.632h12.115v-43.388h75.09v43.388h12.135v-43.388h78.632v43.388h12.155v-43.388h83.661v43.388 h12.114v-43.388h69.572V573.15h-69.572v-78.612h69.572v-12.135h-69.572v-71.649h69.572V398.66h-69.572v-48.397h-12.114v48.397 h-83.661v-48.397h-12.155v48.397h-78.632v-48.397h-12.135v48.397h-75.11v-48.397H156.47v48.397h-80.18v12.094h80.18v71.649h-80.18 v12.135h80.18v78.612h-80.18v12.094h80.18V628.632z M255.789,573.15v-78.612h78.632v78.612H255.789z M430.258,573.15h-83.661 v-78.612h83.661V573.15z M430.258,410.755v71.649h-83.661v-71.649C346.597,410.775,430.258,410.775,430.258,410.755z M334.442,410.755v71.649h-78.632v-71.649C255.809,410.775,334.442,410.775,334.442,410.755z M168.565,410.755h75.09v71.649 h-75.09V410.755z M168.565,494.538h75.09v78.612h-75.09V494.538z"/>
+                            <path class="calendar" fill="#010002" d="M594.669,174.288l-84.069,0.081l-12.277,0.041v49.843c0,13.295-10.872,24.168-24.188,24.168h-28.26 c-13.357,0-24.188-10.852-24.188-24.168v-49.761l-32.231,0.041v49.72c0,13.295-10.893,24.168-24.249,24.168h-28.26 c-13.336,0-24.188-10.852-24.188-24.168v-49.7l-34.246,0.081v49.639c0,13.295-10.872,24.168-24.209,24.168h-28.281 c-13.295,0-24.188-10.852-24.188-24.168v-49.557h-35.264v49.557c0,13.295-10.852,24.168-24.188,24.168h-28.26 c-13.356,0-24.209-10.852-24.209-24.168v-49.456L0,174.899v532.488h42.553h510.234l42.492-0.122L594.669,174.288z M552.788,665.017H42.553V324.813h510.234V665.017z"/>
+                            <path class="calendar" fill="#010002" d="M114.121,231.277h28.26c3.319,0,6.027-2.708,6.027-6.047v-84.7c0-3.359-2.708-6.047-6.027-6.047h-28.26 c-3.359,0-6.067,2.688-6.067,6.047v84.7C108.053,228.569,110.761,231.277,114.121,231.277z"/>
+                            <path class="calendar" fill="#010002" d="M226.022,231.277h28.281c3.339,0,6.047-2.708,6.047-6.047v-84.7c-0.02-3.359-2.728-6.047-6.067-6.047 h-28.281c-3.319,0-6.027,2.688-6.027,6.047v84.7C219.995,228.569,222.703,231.277,226.022,231.277z"/>
+                            <path class="calendar" fill="#010002" d="M336.946,231.277h28.26c3.38,0,6.088-2.708,6.088-6.047v-84.7c-0.02-3.359-2.708-6.047-6.088-6.047h-28.26 c-3.339,0-6.047,2.688-6.047,6.047v84.7C330.899,228.569,333.607,231.277,336.946,231.277z"/>
+                            <path class="calendar" fill="#010002" d="M445.875,231.277h28.26c3.339,0,6.027-2.708,6.027-6.047v-84.7c0-3.359-2.688-6.047-6.027-6.047h-28.26 c-3.339,0-6.047,2.688-6.047,6.047v84.7C439.848,228.569,442.536,231.277,445.875,231.277z"/>
+                        </g>
+                    </g>
+                    </svg>
+                </a>
+            </div>
+            <div class="description">
+                <p class="description">
+                    <a href="http://jobsatnyu.com/" class="jobsatnyu">Job Board</a>
+                    <span style="color: black;"> | </span>
+                    The largest student-run tech organization in NYC
+                </p>
+            </div>
+        </header>
+        <section class="intro">
+            <div class="site">
+            </div>
+        </section>
+        <div class="site" ui-view></div>
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.min.js"></script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-61703314-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!---->
+</body>
+
+</html>
