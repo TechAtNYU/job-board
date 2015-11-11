@@ -188,7 +188,6 @@ header.main a:hover {
 }
 header { 
     margin: 0 auto;
-    z-index: 1000;
     position: fixed;
     background-color: white;
     width: 100%;

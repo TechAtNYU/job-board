@@ -3,7 +3,7 @@
 angular
 .module('app.controllers')
 .controller('JobBoardCtrl', function($scope, Restangular) {
-    Restangular.one('jobs')
+    Restangular.one('jobs?include=employer&sort=-created')
         .get()
         .then(function(jobs) {
             $scope.jobs = jobs;

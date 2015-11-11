@@ -6,5 +6,5 @@ You get a job and you get a job and you!
 
 ## How to Run:
 
-### 1. `npm install`
-### 2. `npm start`
+1. `npm install`
+2. `npm start`

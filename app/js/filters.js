@@ -3,6 +3,6 @@
 angular.module('app.filters', [])
 .filter('firstSentence', function() {
     return function(str) {
-        return str.split('.')[0];
+        return str.split('.')[0] + '.';
     };
 });
