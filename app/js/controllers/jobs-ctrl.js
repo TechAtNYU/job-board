@@ -24,7 +24,6 @@ angular
                 $scope.filter.positionLevelFiltersToJobs[val.attributes.positionLevel].push(val);
             }).value();
             $scope.jobs = jobs;
-            console.log($scope.filter);
         })
         .catch(function(error){
             console.log(error);
