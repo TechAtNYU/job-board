@@ -1,28 +1,28 @@
 @import "ionicons.css";
 @font-face {
   font-family: 'input_mono_compressedregular';
-  src: url('/lib/fonts/inputmonocompressed-regular-webfont.eot');
-  src: url('/lib/fonts/inputmonocompressed-regular-webfont.eot?#iefix') format('embedded-opentype'), url('/lib/fonts/inputmonocompressed-regular-webfont.woff') format('woff'), url('/lib/fonts/inputmonocompressed-regular-webfont.ttf') format('truetype'), url('/lib/fonts/inputmonocompressed-regular-webfont.svg#input_mono_compressedregular') format('svg');
+  src: url('/fonts/inputmonocompressed-regular-webfont.eot');
+  src: url('/fonts/inputmonocompressed-regular-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/inputmonocompressed-regular-webfont.woff') format('woff'), url('/fonts/inputmonocompressed-regular-webfont.ttf') format('truetype'), url('/fonts/inputmonocompressed-regular-webfont.svg#input_mono_compressedregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'metablack-romanregular';
-  src: url('/lib/fonts/mtblro__-webfont.eot');
-  src: url('/lib/fonts/mtblro__-webfont.eot?#iefix') format('embedded-opentype'), url('/lib/fonts/mtblro__-webfont.woff') format('woff'), url('/lib/fonts/mtblro__-webfont.ttf') format('truetype'), url('/lib/fonts/mtblro__-webfont.svg#metablack-romanregular') format('svg');
+  src: url('/fonts/mtblro__-webfont.eot');
+  src: url('/fonts/mtblro__-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/mtblro__-webfont.woff') format('woff'), url('/fonts/mtblro__-webfont.ttf') format('truetype'), url('/fonts/mtblro__-webfont.svg#metablack-romanregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'metanormallf-romanregular';
-  src: url('/lib/fonts/mtnolfro-webfont.eot');
-  src: url('/lib/fonts/mtnolfro-webfont.eot?#iefix') format('embedded-opentype'), url('/lib/fonts/mtnolfro-webfont.woff') format('woff'), url('/lib/fonts/mtnolfro-webfont.ttf') format('truetype'), url('/lib/fonts/mtnolfro-webfont.svg#metanormallf-romanregular') format('svg');
+  src: url('/fonts/mtnolfro-webfont.eot');
+  src: url('/fonts/mtnolfro-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/mtnolfro-webfont.woff') format('woff'), url('/fonts/mtnolfro-webfont.ttf') format('truetype'), url('/fonts/mtnolfro-webfont.svg#metanormallf-romanregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face { 
-	font-family: 'merriweather-bold';
-	src: url('/lib/fonts/Merriweather-Bold.ttf');
+    font-family: 'merriweather-bold';
+    src: url('/fonts/Merriweather-Bold.ttf');
 }
 /* -- FLUID GRID STYLES -- */
 .grid {
@@ -30,6 +30,10 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+.job__title a {
+    color: #FFFFFF;
+    text-decoration: none;
 }
 .grid li {
   display: inline-block;
@@ -71,8 +75,8 @@ h6 {
 }
 h1 {
   font-size: 2em;
-	font-family: "merriweather-bold";
-	color: #152a5b;
+    font-family: "merriweather-bold";
+    color: #152a5b;
 }
 h2 {
   font-size: 1.8em;
@@ -80,12 +84,12 @@ h2 {
 }
 h3 {
   font-size: 1.6em;
-	color: #152a5b;
-	font-family: "merriweather-bold";
+    color: #152a5b;
+    font-family: "merriweather-bold";
 }
 h4 {
   font-size: 1.4em;
-	color: #d7552d;
+    color: #d7552d;
 }
 h5 {
   font-size: 1.2em;
@@ -183,44 +187,43 @@ header.main a:hover {
   text-decoration: none;
 }
 header { 
-	margin: 0 auto;
-	z-index: 1000;
-	position: fixed;
-	background-color: white;
-	width: 100%;
-	padding: 0px 10px 20px 0px;
+    margin: 0 auto;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    padding: 0px 10px 20px 0px;
 }
 
 header img.logo { 
-	width: 200px;
-	height: auto;
-	padding: 14px 0px 0px 27px;
-	margin: 0;
+    width: 200px;
+    height: auto;
+    padding: 14px 0px 0px 27px;
+    margin: 0;
 }
 
 header svg { 
-	width: 55px;
-	height: auto;
-	float: right;
-	padding: 14px 27px 0px 0px;
+    width: 55px;
+    height: auto;
+    float: right;
+    padding: 14px 27px 0px 0px;
 }
  
 header div.logo_calendar { 
-	display: inline;	
+    display: inline;    
 }
 
 header div.description { 
-	margin: 0;	
+    margin: 0;  
 }
 
 header p.description { 
-	padding-left: 27px;
-	margin: 0;
-	color: #d7552d;
+    padding-left: 27px;
+    margin: 0;
+    color: #d7552d;
 }
 
 header .calendar { 
-	fill: #65408b;
+    fill: #65408b;
 }
 .posts li {
   padding: 1em 0;
@@ -231,7 +234,7 @@ footer {
 }
 footer .colophon {
   margin: 4em 1em;
-	clear: both;
+    clear: both;
   text-align: right;
 }
 .logo__jobs {
@@ -246,7 +249,7 @@ footer .colophon {
   font-family: "metablack-romanregular";
 }
 .job__listing {
-	margin-bottom: 5em;
+    margin-bottom: 5em;
 }
 footer {
   background: #cccccc;
@@ -254,34 +257,34 @@ footer {
 @media only screen and (min-width: 70em) {
   .site, .site_footer {
     padding-top: 94px;
-		max-width: 50em;
+        max-width: 50em;
     width: 50%;
     font-size: 125%;
   }
-	.site_footer { 
-		padding-top: 0;	
-	}
+    .site_footer { 
+        padding-top: 0; 
+    }
 }
 @media only screen and (min-width: 50em) and (max-width: 70em) {
   .site, .site_footer {
     max-width: 45em;
     width: 75%;
-		padding-top: 94px;
+        padding-top: 94px;
   }
-	.site_footer { 
-		padding-top: 0;
-	}
+    .site_footer { 
+        padding-top: 0;
+    }
 }
 @media only screen and (min-width: 40em) and (max-width: 50em) {
   .site, .site_footer {
     width: 90%;
     max-width: 45em;
     font-size: .85em;
-		padding-top: 76px;
-	}
-	.site_footer { 
-		padding-top: 0;
-	}
+        padding-top: 76px;
+    }
+    .site_footer { 
+        padding-top: 0;
+    }
 }
 @media only screen and (min-width: 30em) and (max-width: 70em) {
   .grid li {
@@ -302,10 +305,10 @@ footer {
     padding: 5.3em 1em 1em;
     width: 100%;
     font-size: .85em;
-	}
-	.site_footer { 
-		padding: 1em;
-	}
+    }
+    .site_footer { 
+        padding: 1em;
+    }
 }
 @media print {
   @page {
@@ -320,4 +323,15 @@ footer {
   header.main h1 {
     font-size: 48px !important;
   }
+}
+a[ng-click] {
+  color: red ;
+  cursor: pointer ;
+  text-decoration: underline ;
+}
+.filters section {
+  display:inline;
+}
+.filters a {
+  text-decoration: none;
 }
