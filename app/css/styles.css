@@ -95,10 +95,10 @@ a {
 a:link,
 a:visited,
 a:active {
-  color: #65408b;
+  color: #4bab9d;
 }
 a:hover {
-  color: #65408b;
+  color: #4bab9d;
 }
 blockquote {
   margin: 1.5em;
@@ -309,7 +309,7 @@ footer {
   }
 }
 a[ng-click] {
-  color: #3E8F83;
+  color: #6600cc;
   cursor: pointer ;
   text-decoration: underline ;
 }
