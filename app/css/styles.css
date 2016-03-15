@@ -1,7 +1,12 @@
 @import "ionicons.css";
 
+<<<<<<< HEAD
 @import url(https://fonts.googleapis.com/css?family=Inconsolata);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+=======
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:700);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+>>>>>>> 87b3fd4... changed fonts and color scheme
 
 /* -- FLUID GRID STYLES -- */
 .grid {
@@ -11,7 +16,11 @@
   box-sizing: border-box;
 }
 .job__title a {
+<<<<<<< HEAD
     font-family: "Inconsolata", Sans-Serif;
+=======
+    font-family: "Work Sans", Sans-Serif;
+>>>>>>> 87b3fd4... changed fonts and color scheme
     color: #FFFFFF;
     text-decoration: underline;
     font-size: 34px;
@@ -43,7 +52,11 @@
   display: inline-block;
 }
 body {
+<<<<<<< HEAD
   font: 1em "Source Sans Pro", helvetica, arial, sans-serif;
+=======
+  font: 1em "Inconsolata", helvetica, arial, sans-serif;
+>>>>>>> 87b3fd4... changed fonts and color scheme
   font-weight: normal;
   line-height: 1.5;
 }
@@ -118,11 +131,19 @@ body {
   background: #ffffff;
 }
 ::selection {
+<<<<<<< HEAD
   background: #FFDA95;
   /* Safari */
 }
 ::-moz-selection {
   background: #FFDA95;
+=======
+  background: #F5B93F;
+  /* Safari */
+}
+::-moz-selection {
+  background: #F5B93F;
+>>>>>>> 87b3fd4... changed fonts and color scheme
   /* Firefox */
 }
 .container {
@@ -309,7 +330,11 @@ footer {
   }
 }
 a[ng-click] {
+<<<<<<< HEAD
   color: #6600cc;
+=======
+  color: #3E8F83;
+>>>>>>> 87b3fd4... changed fonts and color scheme
   cursor: pointer ;
   text-decoration: underline ;
 }
