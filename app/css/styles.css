@@ -1,7 +1,7 @@
 @import "ionicons.css";
 
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:700);
 @import url(https://fonts.googleapis.com/css?family=Inconsolata);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
 /* -- FLUID GRID STYLES -- */
 .grid {
@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 .job__title a {
-    font-family: "Work Sans", Sans-Serif;
+    font-family: "Inconsolata", Sans-Serif;
     color: #FFFFFF;
     text-decoration: underline;
     font-size: 34px;
@@ -43,7 +43,7 @@
   display: inline-block;
 }
 body {
-  font: 1em "Inconsolata", helvetica, arial, sans-serif;
+  font: 1em "Source Sans Pro", helvetica, arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
 }
@@ -59,21 +59,21 @@ h6 {
 }
 h1 {
   font-size: 2em;
-    font-family: "merriweather-bold";
+    font-family: "Inconsolata", Sans-Serif;
     color: #152a5b;
 }
 h2 {
   font-size: 1.8em;
-  font-family: "metablack-romanregular";
+  font-family: "Inconsolata", Sans-Serif;
 }
 h3 {
   font-size: 1.6em;
-    color: #152a5b;
-    font-family: "merriweather-bold";
+  color: #43C0C8;
+  font-family: "Inconsolata", Sans-Serif;
 }
 h4 {
   font-size: 1.4em;
-    color: #d7552d;
+  color: #43C0C8;
 }
 h5 {
   font-size: 1.2em;
@@ -95,10 +95,10 @@ a {
 a:link,
 a:visited,
 a:active {
-  color: #4bab9d;
+  color: #43C0C8;
 }
 a:hover {
-  color: #4bab9d;
+  color: #793FF0;
 }
 blockquote {
   margin: 1.5em;
@@ -118,11 +118,11 @@ body {
   background: #ffffff;
 }
 ::selection {
-  background: #F5B93F;
+  background: #FFDA95;
   /* Safari */
 }
 ::-moz-selection {
-  background: #F5B93F;
+  background: #FFDA95;
   /* Firefox */
 }
 .container {
@@ -230,7 +230,7 @@ footer .colophon {
   max-width: 20em;
 }
 .job__company {
-  font-family: "metablack-romanregular";
+  font-family: "Inconsolata", Sans-Serif;
 }
 .job__listing {
     padding: 1.8em 0em;
