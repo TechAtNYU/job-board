@@ -1,29 +1,8 @@
 @import "ionicons.css";
-@font-face {
-  font-family: 'input_mono_compressedregular';
-  src: url('/fonts/inputmonocompressed-regular-webfont.eot');
-  src: url('/fonts/inputmonocompressed-regular-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/inputmonocompressed-regular-webfont.woff') format('woff'), url('/fonts/inputmonocompressed-regular-webfont.ttf') format('truetype'), url('/fonts/inputmonocompressed-regular-webfont.svg#input_mono_compressedregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'metablack-romanregular';
-  src: url('/fonts/mtblro__-webfont.eot');
-  src: url('/fonts/mtblro__-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/mtblro__-webfont.woff') format('woff'), url('/fonts/mtblro__-webfont.ttf') format('truetype'), url('/fonts/mtblro__-webfont.svg#metablack-romanregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'metanormallf-romanregular';
-  src: url('/fonts/mtnolfro-webfont.eot');
-  src: url('/fonts/mtnolfro-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/mtnolfro-webfont.woff') format('woff'), url('/fonts/mtnolfro-webfont.ttf') format('truetype'), url('/fonts/mtnolfro-webfont.svg#metanormallf-romanregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face { 
-    font-family: 'merriweather-bold';
-    src: url('/fonts/Merriweather-Bold.ttf');
-}
+
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
 /* -- FLUID GRID STYLES -- */
 .grid {
   text-align: justify;
@@ -32,8 +11,13 @@
   box-sizing: border-box;
 }
 .job__title a {
+    font-family: "Inconsolata", Sans-Serif;
     color: #FFFFFF;
-    text-decoration: none;
+    text-decoration: underline;
+    font-size: 34px;
+}
+#filters {
+  margin: 1em 0em 0em;
 }
 .grid li {
   display: inline-block;
@@ -59,7 +43,7 @@
   display: inline-block;
 }
 body {
-  font: 1em "metanormallf-romanregular", helvetica, arial, sans-serif;
+  font: 1em "Source Sans Pro", helvetica, arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
 }
@@ -75,21 +59,21 @@ h6 {
 }
 h1 {
   font-size: 2em;
-    font-family: "merriweather-bold";
+    font-family: "Inconsolata", Sans-Serif;
     color: #152a5b;
 }
 h2 {
   font-size: 1.8em;
-  font-family: "metablack-romanregular";
+  font-family: "Inconsolata", Sans-Serif;
 }
 h3 {
   font-size: 1.6em;
-    color: #152a5b;
-    font-family: "merriweather-bold";
+  color: #43C0C8;
+  font-family: "Inconsolata", Sans-Serif;
 }
 h4 {
   font-size: 1.4em;
-    color: #d7552d;
+  color: #43C0C8;
 }
 h5 {
   font-size: 1.2em;
@@ -111,10 +95,10 @@ a {
 a:link,
 a:visited,
 a:active {
-  color: #65408b;
+  color: #43C0C8;
 }
 a:hover {
-  color: #65408b;
+  color: #793FF0;
 }
 blockquote {
   margin: 1.5em;
@@ -134,11 +118,11 @@ body {
   background: #ffffff;
 }
 ::selection {
-  background: #65408b;
+  background: #FFDA95;
   /* Safari */
 }
 ::-moz-selection {
-  background: #65408b;
+  background: #FFDA95;
   /* Firefox */
 }
 .container {
@@ -246,10 +230,10 @@ footer .colophon {
   max-width: 20em;
 }
 .job__company {
-  font-family: "metablack-romanregular";
+  font-family: "Inconsolata", Sans-Serif;
 }
 .job__listing {
-    margin-bottom: 5em;
+    padding: 1.8em 0em;
 }
 footer {
   background: #cccccc;
@@ -325,12 +309,13 @@ footer {
   }
 }
 a[ng-click] {
-  color: red ;
+  color: #6600cc;
   cursor: pointer ;
   text-decoration: underline ;
 }
 .filters section {
   display:inline;
+  padding: 1em 0em;
 }
 .filters a {
   text-decoration: none;
