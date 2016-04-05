@@ -12,6 +12,10 @@ test:
     - echo "No tests are needed"
 
 deployment:
+  staging:
+    branch: develop
+    commands:
+      - turbolift -u $RAXUSER -a $RAXAPIKEY --os-rax-auth $RAXREGION upload -s $HOME/$CIRCLE_PROJECT_REPONAME/app -c $STAGECONTAINER;
   production:
     branch: v3
     commands:
