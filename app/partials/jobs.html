@@ -1,5 +1,6 @@
 
 <div cg-busy="{promise: loadingPromise, templateUrl: 'partials/loadingtemplate.html'}">
+  <a href="/#/submit"><button class="post">Post a Job!</button></a>
     <div ng-if="jobs">
         <section id="filters" ng-include src="'/partials/filters.html'"></section></br>
         <section id="jobs">

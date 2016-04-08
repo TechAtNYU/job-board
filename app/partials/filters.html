@@ -1,9 +1,9 @@
 <div cg-busy="{promise: loadingPromise, templateUrl: 'partials/loadingtemplate.html'}"><center>
     <div ng-if="filter" class="filters">
         <section ng-repeat="positionLevelFilter in filter.positionLevelFilters">
-            <a ng-click="filterJobs(positionLevelFilter)">{{positionLevelFilter}}</a>,
+          <a ng-click="filterJobs(positionLevelFilter)"><p class="filter">{{positionLevelFilter}}</p></a> -
         </section>
-        <a href="https://balloon.io/techatnyuresumedrop" title="Resume Drop" target="_blank">Resume Drop</a>
+        <a href="https://balloon.io/techatnyuresumedrop" title="Resume Drop" target="_blank"><p class="filter">Resume Drop</p></a>
     </div>
     </center>
 </div>
