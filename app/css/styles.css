@@ -1,29 +1,15 @@
 @import "ionicons.css";
+
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+
 @font-face {
-  font-family: 'input_mono_compressedregular';
-  src: url('/fonts/inputmonocompressed-regular-webfont.eot');
-  src: url('/fonts/inputmonocompressed-regular-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/inputmonocompressed-regular-webfont.woff') format('woff'), url('/fonts/inputmonocompressed-regular-webfont.ttf') format('truetype'), url('/fonts/inputmonocompressed-regular-webfont.svg#input_mono_compressedregular') format('svg');
+  font-family: "Inconsolata";
+  src: url("/fonts/Inconsolata.otf");
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: 'metablack-romanregular';
-  src: url('/fonts/mtblro__-webfont.eot');
-  src: url('/fonts/mtblro__-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/mtblro__-webfont.woff') format('woff'), url('/fonts/mtblro__-webfont.ttf') format('truetype'), url('/fonts/mtblro__-webfont.svg#metablack-romanregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'metanormallf-romanregular';
-  src: url('/fonts/mtnolfro-webfont.eot');
-  src: url('/fonts/mtnolfro-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/mtnolfro-webfont.woff') format('woff'), url('/fonts/mtnolfro-webfont.ttf') format('truetype'), url('/fonts/mtnolfro-webfont.svg#metanormallf-romanregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face { 
-    font-family: 'merriweather-bold';
-    src: url('/fonts/Merriweather-Bold.ttf');
-}
+
 /* -- FLUID GRID STYLES -- */
 .grid {
   text-align: justify;
@@ -32,8 +18,13 @@
   box-sizing: border-box;
 }
 .job__title a {
+    font-family: "Inconsolata", Sans-Serif;
     color: #FFFFFF;
-    text-decoration: none;
+    text-decoration: underline;
+    font-size: 34px;
+}
+#filters {
+  margin: 1em 0em 0em;
 }
 .grid li {
   display: inline-block;
@@ -59,7 +50,7 @@
   display: inline-block;
 }
 body {
-  font: 1em "metanormallf-romanregular", helvetica, arial, sans-serif;
+  font: 1em "ff-meta-web-pro", sans-serif;
   font-weight: normal;
   line-height: 1.5;
 }
@@ -75,21 +66,21 @@ h6 {
 }
 h1 {
   font-size: 2em;
-    font-family: "merriweather-bold";
+    font-family: "Inconsolata", Sans-Serif;
     color: #152a5b;
 }
 h2 {
   font-size: 1.8em;
-  font-family: "metablack-romanregular";
+  font-family: "Inconsolata", Sans-Serif;
 }
 h3 {
   font-size: 1.6em;
-    color: #152a5b;
-    font-family: "merriweather-bold";
+  color: #D7552D;
+  font-family: "Inconsolata", Sans-Serif;
 }
 h4 {
   font-size: 1.4em;
-    color: #d7552d;
+  color: #43C0C8;
 }
 h5 {
   font-size: 1.2em;
@@ -101,21 +92,63 @@ hr {
   clear: both;
 }
 p {
-  font-size: 100%;
+  font-size: 19px;
   line-height: 1.75;
   margin-bottom: .75em;
 }
 a {
   font-weight: normal;
+  -webkit-transition: 0.3s ease;
+          transition: 0.3s ease;
 }
 a:link,
 a:visited,
 a:active {
-  color: #65408b;
+  color: #65408B;
 }
 a:hover {
-  color: #65408b;
+  color: #D7552D;
 }
+a.header,
+a.header:hover,
+a.header:link,
+a.header:visited,
+a.header:active {
+  color:#65408B;
+  text-decoration: none;
+  -webkit-transition: none;
+          transition: none;
+}
+
+button {
+  background: #D7552D;
+  border-style: solid;
+  border-color: transparent;
+  color: white;
+  font-family: "Inconsolata", Sans-Serif;
+  -webkit-transition: 0.3s ease;
+          transition: 0.3s ease;
+}
+
+button:hover {
+  background: white;
+  border-style: solid;
+  color: #D7552D;
+  border-color: #D7552D;
+}
+
+button.post {
+  font-size: 19px;
+  top: 89%;
+  right: 0%;
+  margin-right: 27px;
+  position: fixed;
+  float: right;
+  z-index: 10000;
+  width: 170px;
+  height: 50px;
+}
+
 blockquote {
   margin: 1.5em;
 }
@@ -134,12 +167,11 @@ body {
   background: #ffffff;
 }
 ::selection {
-  background: #65408b;
+  background: #EFBC2E;
   /* Safari */
 }
 ::-moz-selection {
-  background: #65408b;
-  /* Firefox */
+  background: #EFBC2E;
 }
 .container {
   width: 100%;
@@ -187,18 +219,27 @@ header.main a:hover {
   text-decoration: none;
 }
 header { 
-    margin: 0 auto;
-    position: fixed;
-    background-color: white;
-    width: 100%;
-    padding: 0px 10px 20px 0px;
+  margin: 0 auto;
+  background-color: white;
+  width: 100%;
+  padding-top: 2%;
+}
+
+header h1.title {
+  text-align: center;
+  display: inline;
+  color: #43C0C8;
+  left: 45%;
+  position: absolute;
+  margin: 15px 0px 0px 0px;
 }
 
 header img.logo { 
-    width: 200px;
-    height: auto;
-    padding: 14px 0px 0px 27px;
-    margin: 0;
+  width: 160px;
+  height: auto;
+  padding: 14px 0px 0px 27px;
+  margin: 0;
+  position: fixed;
 }
 
 header svg { 
@@ -206,6 +247,8 @@ header svg {
     height: auto;
     float: right;
     padding: 14px 27px 0px 0px;
+    position: fixed;
+    right: 0%;
 }
  
 header div.logo_calendar { 
@@ -246,10 +289,10 @@ footer .colophon {
   max-width: 20em;
 }
 .job__company {
-  font-family: "metablack-romanregular";
+  font-family: "Inconsolata", Sans-Serif;
 }
 .job__listing {
-    margin-bottom: 5em;
+    padding: 1.8em 0em;
 }
 footer {
   background: #cccccc;
@@ -305,10 +348,26 @@ footer {
     padding: 5.3em 1em 1em;
     width: 100%;
     font-size: .85em;
-    }
-    .site_footer { 
-        padding: 1em;
-    }
+  }
+  
+  .site_footer { 
+    padding: 1em;
+  }
+
+  header img.logo {
+    position: absolute;
+    width: 140px;
+    padding-left: 10px;
+  }
+
+  header h1.title {
+    font-size: 1.7em;
+  }
+
+  header svg {
+    position: absolute;
+    padding: 11px 27px 0px 0px;
+  }
 }
 @media print {
   @page {
@@ -325,13 +384,33 @@ footer {
   }
 }
 a[ng-click] {
-  color: red ;
+  color: #D7552D;
   cursor: pointer ;
   text-decoration: underline ;
 }
 .filters section {
   display:inline;
+  padding: 1em 0em;
 }
 .filters a {
   text-decoration: none;
+}
+
+.filters p {
+  display:inline;
+}
+
+fieldset {
+  border: none;
+}
+
+section#submit {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1.submit {
+  text-align: center;
 }

@@ -16,7 +16,7 @@ angular.module('app')
         })
         .state('submit', {
             url: '/submit',
-            templateUrl: 'partials/job-add.html',
-            controller: 'NewJobCtrl'
+            templateUrl: 'partials/submit.html',
+            controller: 'JobAddCtrl'
         });
 });
