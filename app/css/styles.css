@@ -137,6 +137,13 @@ button:hover {
   border-color: #D7552D;
 }
 
+.tag {
+  color: white;
+  padding: 0.2em 0.5em;
+  font-size: 19px;
+  margin: 0.5em 0.5em 1.8em 0em;
+}
+
 button.post {
   font-size: 19px;
   top: 89%;

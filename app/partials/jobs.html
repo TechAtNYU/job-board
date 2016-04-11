@@ -6,7 +6,8 @@
         <section id="jobs">
             <div ng-repeat="job in jobs" class="job__listing">
                 <h4 class="job__title"><a ui-sref="job({id: job.id})">{{job.attributes.positionTitle}}</a></h4>
-                <p>{{job.attributes.category}}, {{job.attributes.positionLevel}}</p>
+                <button class="tag">{{job.attributes.category}}</button>
+                <button class="tag">{{job.attributes.positionLevel}}</button>
                 <p ng-bind-html="job.attributes.description | firstSentence"></p>
             </div>
         </section>
