@@ -137,11 +137,14 @@ button:hover {
   border-color: #65408B;
 }
 
-.tag {
-  color: white;
-  padding: 0.2em 0.5em;
+div.tag {
+  margin: 0.5em auto 1.5em;
+}
+
+p.tag {
+  color: #D7552D;
   font-size: 19px;
-  margin: 0.5em 0.5em 1.8em 0em;
+  display: inline;
 }
 
 button.post {
