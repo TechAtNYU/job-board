@@ -17,11 +17,14 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+h4.job__title {
+  margin: 0.5em auto;
+}
 .job__title a {
-    font-family: "Inconsolata", Sans-Serif;
-    color: #FFFFFF;
-    text-decoration: underline;
-    font-size: 34px;
+  font-family: "Inconsolata", Sans-Serif;
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-size: 34px;
 }
 #filters {
   margin: 1em 0em 0em;
@@ -119,7 +122,6 @@ a.header:active {
   -webkit-transition: none;
           transition: none;
 }
-
 button {
   background: #D7552D;
   border-style: solid;
@@ -135,10 +137,6 @@ button:hover {
   border-style: solid;
   color: #65408B;
   border-color: #65408B;
-}
-
-div.tag {
-  margin: 0.5em auto 1.5em;
 }
 
 p.tag {
@@ -228,11 +226,13 @@ header.main li {
 header.main a:hover {
   text-decoration: none;
 }
+
 header { 
   margin: 0 auto;
   background-color: white;
   width: 100%;
-  padding-top: 2%;
+  display: inline;
+  padding: 2px;
 }
 
 header h1.title {
@@ -253,30 +253,31 @@ header img.logo {
 }
 
 header svg { 
-    width: 55px;
-    height: auto;
-    float: right;
-    padding: 14px 27px 0px 0px;
-    position: fixed;
-    right: 0%;
+  width: 40px;
+  height: 40px;
 }
- 
+header a.calendar {
+  float: right;
+  position: fixed;
+  top: 5%;
+  right: 3%;
+}
 header div.logo_calendar { 
-    display: inline;    
+  display: inline;
 }
 
 header div.description { 
-    margin: 0;  
+  margin: 0;  
 }
 
 header p.description { 
-    padding-left: 27px;
-    margin: 0;
-    color: #d7552d;
+  padding-left: 27px;
+  margin: 0;
+  color: #d7552d;
 }
 
 header .calendar { 
-    fill: #65408b;
+  fill: #65408b;
 }
 .posts li {
   padding: 1em 0;
@@ -289,6 +290,12 @@ footer .colophon {
   margin: 4em 1em;
     clear: both;
   text-align: right;
+}
+button.apply {
+  width: 107px;
+  height: auto;
+  font-size: 19px;
+  padding: 0.1em;
 }
 .logo__jobs {
   padding: 1em;
@@ -310,38 +317,35 @@ footer {
 @media only screen and (min-width: 70em) {
   .site, .site_footer {
     padding-top: 94px;
-        max-width: 50em;
-    width: 50%;
+    max-width: 50em;
+    /*width: 50%;*/
     font-size: 125%;
   }
-    .site_footer { 
-        padding-top: 0; 
-    }
+  .site_footer { 
+    padding-top: 0; 
+  }
 }
 @media only screen and (min-width: 50em) and (max-width: 70em) {
   .site, .site_footer {
     max-width: 45em;
-    width: 75%;
-        padding-top: 94px;
+    padding-top: 94px;
   }
-    .site_footer { 
-        padding-top: 0;
-    }
+  .site_footer { 
+    padding-top: 0;
+  }
 }
 @media only screen and (min-width: 40em) and (max-width: 50em) {
   .site, .site_footer {
-    width: 90%;
     max-width: 45em;
     font-size: .85em;
-        padding-top: 76px;
-    }
-    .site_footer { 
-        padding-top: 0;
-    }
+    padding-top: 76px;
+  }
+  .site_footer { 
+    padding-top: 0;
+  }
 }
 @media only screen and (min-width: 30em) and (max-width: 70em) {
   .grid li {
-    width: 45%;
     margin-bottom: 4%;
   }
 }
@@ -362,21 +366,6 @@ footer {
   
   .site_footer { 
     padding: 1em;
-  }
-
-  header img.logo {
-    position: absolute;
-    width: 140px;
-    padding-left: 10px;
-  }
-
-  header h1.title {
-    font-size: 1.7em;
-  }
-
-  header svg {
-    position: absolute;
-    padding: 11px 27px 0px 0px;
   }
 }
 @media print {
