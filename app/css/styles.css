@@ -68,9 +68,9 @@ h6 {
   margin-bottom: .1em;
 }
 h1 {
-  font-size: 2em;
-    font-family: "Inconsolata", Sans-Serif;
-    color: #152a5b;
+  font-size: 3em;
+  font-family: "Inconsolata", Sans-Serif;
+  color: #65408B;
 }
 h2 {
   font-size: 1.8em;
@@ -238,18 +238,18 @@ header {
 header h1.title {
   text-align: center;
   display: inline;
-  color: #43C0C8;
-  left: 45%;
+  left: 41%;
   position: absolute;
   margin: 15px 0px 0px 0px;
 }
 
 header img.logo { 
-  width: 160px;
+  width: 180px;
   height: auto;
-  padding: 14px 0px 0px 27px;
   margin: 0;
   position: fixed;
+  left: 3%;
+  top: 2%;
 }
 
 header svg { 
@@ -259,7 +259,6 @@ header svg {
 header a.calendar {
   float: right;
   position: fixed;
-  top: 5%;
   right: 3%;
 }
 header div.logo_calendar { 
@@ -318,7 +317,7 @@ footer {
   .site, .site_footer {
     padding-top: 94px;
     max-width: 50em;
-    /*width: 50%;*/
+    width: 50%;
     font-size: 125%;
   }
   .site_footer { 
@@ -343,10 +342,30 @@ footer {
   .site_footer { 
     padding-top: 0;
   }
+  header svg {
+    width: 70px;
+    height: 70px;
+  }
+  header a.calendar {
+    position: absolute;
+  }
+  header img.logo {
+    position: absolute;
+  }
 }
 @media only screen and (min-width: 30em) and (max-width: 70em) {
   .grid li {
     margin-bottom: 4%;
+  }
+  header svg {
+    width: 70px;
+    height: 70px;
+  }
+  header a.calendar {
+    position: absolute;
+  }
+  header img.logo {
+    position: absolute;
   }
 }
 @media only screen and (max-width: 30em) {
@@ -355,6 +374,16 @@ footer {
     width: 100%;
     padding: 1em;
     margin-bottom: 5%;
+  }
+  header svg {
+    width: 70px;
+    height: 70px;
+  }
+  header a.calendar {
+    position: absolute;
+  }
+  header img.logo {
+    position: absolute;
   }
 }
 @media only screen and (max-width: 40em) {
@@ -367,6 +396,18 @@ footer {
   .site_footer { 
     padding: 1em;
   }
+
+  header svg {
+    width: 70px;
+    height: 70px;
+  }
+  header a.calendar {
+    position: absolute;
+  }
+  header img.logo {
+    position: absolute;
+  }
+
 }
 @media print {
   @page {
