@@ -66,36 +66,26 @@ h6 {
   font-weight: normal;
   line-height: 1.25;
   margin-bottom: .1em;
+  font-family: "Inconsolata", Sans-Serif;
 }
 h1 {
-  font-size: 3em;
-  font-family: "Inconsolata", Sans-Serif;
   color: #65408B;
 }
 h2 {
-  font-size: 1.8em;
-  font-family: "Inconsolata", Sans-Serif;
 }
 h3 {
-  font-size: 1.6em;
   color: #D7552D;
-  font-family: "Inconsolata", Sans-Serif;
+}
+h3.post, h3.apply {
+  font-size: 3vmin;
 }
 h4 {
-  font-size: 1.4em;
-  color: #43C0C8;
-}
-h5 {
-  font-size: 1.2em;
-}
-h6 {
-  font-size: 1.1em;
+  color: white;
 }
 hr {
   clear: both;
 }
 p {
-  font-size: 19px;
   line-height: 1.75;
   margin-bottom: .75em;
 }
@@ -135,10 +125,18 @@ button {
 button:hover {
   background: white;
   border-style: solid;
-  color: #65408B;
   border-color: #65408B;
 }
-
+button
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover,
+p:hover {
+  color: #65408B;
+}
 p.tag {
   color: #D7552D;
   font-size: 19px;
@@ -146,7 +144,6 @@ p.tag {
 }
 
 button.post {
-  font-size: 19px;
   top: 89%;
   right: 0%;
   margin-right: 27px;
@@ -238,7 +235,7 @@ header {
 header h1.title {
   text-align: center;
   display: inline;
-  left: 41%;
+  left: 45%;
   position: absolute;
   margin: 15px 0px 0px 0px;
 }
@@ -385,6 +382,9 @@ footer {
   header img.logo {
     position: absolute;
   }
+  button.apply {
+    width: 128px;
+  }
 }
 @media only screen and (max-width: 40em) {
   .site, .site_footer {
@@ -407,7 +407,9 @@ footer {
   header img.logo {
     position: absolute;
   }
-
+  button.apply {
+    width: 128px;
+  }
 }
 @media print {
   @page {
