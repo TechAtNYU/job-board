@@ -126,15 +126,6 @@ button:hover {
   background: white;
   border-style: solid;
   border-color: #65408B;
-}
-button
-h1:hover,
-h2:hover,
-h3:hover,
-h4:hover,
-h5:hover,
-h6:hover,
-p:hover {
   color: #65408B;
 }
 p.tag {
@@ -144,14 +135,14 @@ p.tag {
 }
 
 button.post {
+  font-size: 3.5vmin;
   top: 89%;
   right: 0%;
   margin-right: 27px;
   position: fixed;
   float: right;
   z-index: 10000;
-  width: 170px;
-  height: 50px;
+  padding: 2.1vmin 4.3vmin;
 }
 
 blockquote {
@@ -288,10 +279,9 @@ footer .colophon {
   text-align: right;
 }
 button.apply {
-  width: 107px;
   height: auto;
-  font-size: 19px;
-  padding: 0.1em;
+  font-size: 3vmin;
+  padding: 0.4vmin 2.5vmin;
 }
 .logo__jobs {
   padding: 1em;
