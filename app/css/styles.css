@@ -1,7 +1,14 @@
 @import "ionicons.css";
 
 @import url(https://fonts.googleapis.com/css?family=Inconsolata);
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/fonts/Inconsolata.otf");
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* -- FLUID GRID STYLES -- */
 .grid {
@@ -10,11 +17,14 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+h4.job__title {
+  margin: 0.5em auto;
+}
 .job__title a {
-    font-family: "Inconsolata", Sans-Serif;
-    color: #FFFFFF;
-    text-decoration: underline;
-    font-size: 34px;
+  font-family: "Inconsolata", Sans-Serif;
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-size: 34px;
 }
 #filters {
   margin: 1em 0em 0em;
@@ -43,7 +53,7 @@
   display: inline-block;
 }
 body {
-  font: 1em "Source Sans Pro", helvetica, arial, sans-serif;
+  font: 1em "ff-meta-web-pro", sans-serif;
   font-weight: normal;
   line-height: 1.5;
 }
@@ -56,50 +66,85 @@ h6 {
   font-weight: normal;
   line-height: 1.25;
   margin-bottom: .1em;
+  font-family: "Inconsolata", Sans-Serif;
 }
 h1 {
-  font-size: 2em;
-    font-family: "Inconsolata", Sans-Serif;
-    color: #152a5b;
+  color: #65408B;
 }
 h2 {
-  font-size: 1.8em;
-  font-family: "Inconsolata", Sans-Serif;
 }
 h3 {
-  font-size: 1.6em;
-  color: #43C0C8;
-  font-family: "Inconsolata", Sans-Serif;
+  color: #D7552D;
+}
+h3.post, h3.apply {
+  font-size: 3vmin;
 }
 h4 {
-  font-size: 1.4em;
-  color: #43C0C8;
-}
-h5 {
-  font-size: 1.2em;
-}
-h6 {
-  font-size: 1.1em;
+  color: white;
 }
 hr {
   clear: both;
 }
 p {
-  font-size: 100%;
   line-height: 1.75;
   margin-bottom: .75em;
 }
 a {
   font-weight: normal;
+  -webkit-transition: 0.3s ease;
+          transition: 0.3s ease;
 }
 a:link,
 a:visited,
 a:active {
-  color: #43C0C8;
+  color: #65408B;
 }
 a:hover {
-  color: #793FF0;
+  color: #D7552D;
 }
+a.header,
+a.header:hover,
+a.header:link,
+a.header:visited,
+a.header:active {
+  color:#65408B;
+  text-decoration: none;
+  -webkit-transition: none;
+          transition: none;
+}
+button {
+  background: #D7552D;
+  border-style: solid;
+  border-color: transparent;
+  color: white;
+  font-family: "Inconsolata", Sans-Serif;
+  -webkit-transition: 0.3s ease;
+          transition: 0.3s ease;
+}
+
+button:hover {
+  background: white;
+  border-style: solid;
+  border-color: #65408B;
+  color: #65408B;
+}
+p.tag {
+  color: #D7552D;
+  font-size: 19px;
+  display: inline;
+}
+
+button.post {
+  font-size: 3.5vmin;
+  top: 89%;
+  right: 0%;
+  margin-right: 27px;
+  position: fixed;
+  float: right;
+  z-index: 10000;
+  padding: 2.1vmin 4.3vmin;
+}
+
 blockquote {
   margin: 1.5em;
 }
@@ -118,12 +163,11 @@ body {
   background: #ffffff;
 }
 ::selection {
-  background: #FFDA95;
+  background: #EFBC2E;
   /* Safari */
 }
 ::-moz-selection {
-  background: #FFDA95;
-  /* Firefox */
+  background: #EFBC2E;
 }
 .container {
   width: 100%;
@@ -170,44 +214,57 @@ header.main li {
 header.main a:hover {
   text-decoration: none;
 }
+
 header { 
-    margin: 0 auto;
-    position: fixed;
-    background-color: white;
-    width: 100%;
-    padding: 0px 10px 20px 0px;
+  margin: 0 auto;
+  background-color: white;
+  width: 100%;
+  display: inline;
+  padding: 2px;
+}
+
+header h1.title {
+  text-align: center;
+  display: inline;
+  left: 45%;
+  position: absolute;
+  margin: 15px 0px 0px 0px;
 }
 
 header img.logo { 
-    width: 200px;
-    height: auto;
-    padding: 14px 0px 0px 27px;
-    margin: 0;
+  width: 180px;
+  height: auto;
+  margin: 0;
+  position: fixed;
+  left: 3%;
+  top: 2%;
 }
 
 header svg { 
-    width: 55px;
-    height: auto;
-    float: right;
-    padding: 14px 27px 0px 0px;
+  width: 40px;
+  height: 40px;
 }
- 
+header a.calendar {
+  float: right;
+  position: fixed;
+  right: 3%;
+}
 header div.logo_calendar { 
-    display: inline;    
+  display: inline;
 }
 
 header div.description { 
-    margin: 0;  
+  margin: 0;  
 }
 
 header p.description { 
-    padding-left: 27px;
-    margin: 0;
-    color: #d7552d;
+  padding-left: 27px;
+  margin: 0;
+  color: #d7552d;
 }
 
 header .calendar { 
-    fill: #65408b;
+  fill: #65408b;
 }
 .posts li {
   padding: 1em 0;
@@ -220,6 +277,11 @@ footer .colophon {
   margin: 4em 1em;
     clear: both;
   text-align: right;
+}
+button.apply {
+  height: auto;
+  font-size: 3vmin;
+  padding: 0.4vmin 2.5vmin;
 }
 .logo__jobs {
   padding: 1em;
@@ -241,39 +303,56 @@ footer {
 @media only screen and (min-width: 70em) {
   .site, .site_footer {
     padding-top: 94px;
-        max-width: 50em;
+    max-width: 50em;
     width: 50%;
     font-size: 125%;
   }
-    .site_footer { 
-        padding-top: 0; 
-    }
+  .site_footer { 
+    padding-top: 0; 
+  }
 }
 @media only screen and (min-width: 50em) and (max-width: 70em) {
   .site, .site_footer {
     max-width: 45em;
-    width: 75%;
-        padding-top: 94px;
+    padding-top: 94px;
   }
-    .site_footer { 
-        padding-top: 0;
-    }
+  .site_footer { 
+    padding-top: 0;
+  }
 }
 @media only screen and (min-width: 40em) and (max-width: 50em) {
   .site, .site_footer {
-    width: 90%;
     max-width: 45em;
     font-size: .85em;
-        padding-top: 76px;
-    }
-    .site_footer { 
-        padding-top: 0;
-    }
+    padding-top: 76px;
+  }
+  .site_footer { 
+    padding-top: 0;
+  }
+  header svg {
+    width: 70px;
+    height: 70px;
+  }
+  header a.calendar {
+    position: absolute;
+  }
+  header img.logo {
+    position: absolute;
+  }
 }
 @media only screen and (min-width: 30em) and (max-width: 70em) {
   .grid li {
-    width: 45%;
     margin-bottom: 4%;
+  }
+  header svg {
+    width: 70px;
+    height: 70px;
+  }
+  header a.calendar {
+    position: absolute;
+  }
+  header img.logo {
+    position: absolute;
   }
 }
 @media only screen and (max-width: 30em) {
@@ -283,16 +362,44 @@ footer {
     padding: 1em;
     margin-bottom: 5%;
   }
+  header svg {
+    width: 70px;
+    height: 70px;
+  }
+  header a.calendar {
+    position: absolute;
+  }
+  header img.logo {
+    position: absolute;
+  }
+  button.apply {
+    width: 128px;
+  }
 }
 @media only screen and (max-width: 40em) {
   .site, .site_footer {
     padding: 5.3em 1em 1em;
     width: 100%;
     font-size: .85em;
-    }
-    .site_footer { 
-        padding: 1em;
-    }
+  }
+  
+  .site_footer { 
+    padding: 1em;
+  }
+
+  header svg {
+    width: 70px;
+    height: 70px;
+  }
+  header a.calendar {
+    position: absolute;
+  }
+  header img.logo {
+    position: absolute;
+  }
+  button.apply {
+    width: 128px;
+  }
 }
 @media print {
   @page {
@@ -309,7 +416,7 @@ footer {
   }
 }
 a[ng-click] {
-  color: #6600cc;
+  color: #D7552D;
   cursor: pointer ;
   text-decoration: underline ;
 }
@@ -319,4 +426,23 @@ a[ng-click] {
 }
 .filters a {
   text-decoration: none;
+}
+
+.filters p {
+  display:inline;
+}
+
+fieldset {
+  border: none;
+}
+
+section#submit {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1.submit {
+  text-align: center;
 }
