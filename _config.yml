@@ -1,8 +1,0 @@
-name: job board
-markdown: redcarpet
-
-collections:
-  jobs:
-    output: true
-  companies:
-    output: true

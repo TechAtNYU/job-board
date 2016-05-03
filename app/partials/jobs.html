@@ -1,0 +1,21 @@
+
+<div cg-busy="{promise: loadingPromise, templateUrl: 'partials/loadingtemplate.html'}">
+  <a href="/#/submit">
+    <button class="post">
+      Post a Job
+    </button>
+  </a>
+    <div ng-if="jobs">
+        <section id="filters" ng-include src="'/partials/filters.html'"></section></br>
+        <section id="jobs">
+            <div ng-repeat="job in jobs" class="job__listing">
+              <a href="{{ job.attributes.applicationUrl }}"><button class="apply">Apply</button>
+              <h4 class="job__title"><a ui-sref="job({id: job.id})">{{job.attributes.positionTitle}}</a></h4>
+              <div class="tag">
+                <p class="tag">{{job.attributes.category}}</p> | <p class="tag">{{job.attributes.positionLevel}}</p>
+              </div>
+              <p ng-bind-html="job.attributes.description | firstSentence"></p>
+            </div>
+        </section>
+    </div>
+</div>
