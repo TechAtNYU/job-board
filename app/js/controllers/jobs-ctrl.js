@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-.module('app.controllers')
+.module('app.controllers', ['ngSanitize'])
 .controller('JobBoardCtrl', function($scope, Restangular) {
     $scope.filter = {};
 

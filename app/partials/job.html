@@ -3,7 +3,7 @@
         <section id="job">
             <h3 class="job__title">{{job.attributes.positionTitle}}</h3>
             <p>{{job.attributes.category}}, {{job.attributes.positionLevel}}</p>
-            <p ng-bind-html="job.attributes.description"></p>
+            <p ng-bind-html="description"></p>
             <p><a ng-if="job.attributes.applicationUrl" href="{{job.attributes.applicationUrl}}" target="_blank">Apply</a>, <a ng-if="job.attributes.applicationEmail" href="mailto:{{job.attributes.applicationEmail}}?subject=Tech@NYU - {{job.attributes.positionTitle}}" "email me">Contact</a></p>
         </section>
     </div>

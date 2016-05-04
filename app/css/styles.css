@@ -17,11 +17,14 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+h4.job__title {
+  margin: 0.5em auto;
+}
 .job__title a {
-    font-family: "Inconsolata", Sans-Serif;
-    color: #FFFFFF;
-    text-decoration: underline;
-    font-size: 34px;
+  font-family: "Inconsolata", Sans-Serif;
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-size: 34px;
 }
 #filters {
   margin: 1em 0em 0em;
@@ -63,36 +66,26 @@ h6 {
   font-weight: normal;
   line-height: 1.25;
   margin-bottom: .1em;
+  font-family: "Inconsolata", Sans-Serif;
 }
 h1 {
-  font-size: 2em;
-    font-family: "Inconsolata", Sans-Serif;
-    color: #152a5b;
+  color: #65408B;
 }
 h2 {
-  font-size: 1.8em;
-  font-family: "Inconsolata", Sans-Serif;
 }
 h3 {
-  font-size: 1.6em;
   color: #D7552D;
-  font-family: "Inconsolata", Sans-Serif;
+}
+h3.post, h3.apply {
+  font-size: 3vmin;
 }
 h4 {
-  font-size: 1.4em;
-  color: #43C0C8;
-}
-h5 {
-  font-size: 1.2em;
-}
-h6 {
-  font-size: 1.1em;
+  color: white;
 }
 hr {
   clear: both;
 }
 p {
-  font-size: 19px;
   line-height: 1.75;
   margin-bottom: .75em;
 }
@@ -119,7 +112,6 @@ a.header:active {
   -webkit-transition: none;
           transition: none;
 }
-
 button {
   background: #D7552D;
   border-style: solid;
@@ -133,20 +125,24 @@ button {
 button:hover {
   background: white;
   border-style: solid;
+  border-color: #65408B;
+  color: #65408B;
+}
+p.tag {
   color: #D7552D;
-  border-color: #D7552D;
+  font-size: 19px;
+  display: inline;
 }
 
 button.post {
-  font-size: 19px;
+  font-size: 3.5vmin;
   top: 89%;
   right: 0%;
   margin-right: 27px;
   position: fixed;
   float: right;
   z-index: 10000;
-  width: 170px;
-  height: 50px;
+  padding: 2.1vmin 4.3vmin;
 }
 
 blockquote {
@@ -218,55 +214,57 @@ header.main li {
 header.main a:hover {
   text-decoration: none;
 }
+
 header { 
   margin: 0 auto;
   background-color: white;
   width: 100%;
-  padding-top: 2%;
+  display: inline;
+  padding: 2px;
 }
 
 header h1.title {
   text-align: center;
   display: inline;
-  color: #43C0C8;
   left: 45%;
   position: absolute;
   margin: 15px 0px 0px 0px;
 }
 
 header img.logo { 
-  width: 160px;
+  width: 180px;
   height: auto;
-  padding: 14px 0px 0px 27px;
   margin: 0;
   position: fixed;
+  left: 3%;
+  top: 2%;
 }
 
 header svg { 
-    width: 55px;
-    height: auto;
-    float: right;
-    padding: 14px 27px 0px 0px;
-    position: fixed;
-    right: 0%;
+  width: 40px;
+  height: 40px;
 }
- 
+header a.calendar {
+  float: right;
+  position: fixed;
+  right: 3%;
+}
 header div.logo_calendar { 
-    display: inline;    
+  display: inline;
 }
 
 header div.description { 
-    margin: 0;  
+  margin: 0;  
 }
 
 header p.description { 
-    padding-left: 27px;
-    margin: 0;
-    color: #d7552d;
+  padding-left: 27px;
+  margin: 0;
+  color: #d7552d;
 }
 
 header .calendar { 
-    fill: #65408b;
+  fill: #65408b;
 }
 .posts li {
   padding: 1em 0;
@@ -279,6 +277,11 @@ footer .colophon {
   margin: 4em 1em;
     clear: both;
   text-align: right;
+}
+button.apply {
+  height: auto;
+  font-size: 3vmin;
+  padding: 0.4vmin 2.5vmin;
 }
 .logo__jobs {
   padding: 1em;
@@ -300,39 +303,56 @@ footer {
 @media only screen and (min-width: 70em) {
   .site, .site_footer {
     padding-top: 94px;
-        max-width: 50em;
+    max-width: 50em;
     width: 50%;
     font-size: 125%;
   }
-    .site_footer { 
-        padding-top: 0; 
-    }
+  .site_footer { 
+    padding-top: 0; 
+  }
 }
 @media only screen and (min-width: 50em) and (max-width: 70em) {
   .site, .site_footer {
     max-width: 45em;
-    width: 75%;
-        padding-top: 94px;
+    padding-top: 94px;
   }
-    .site_footer { 
-        padding-top: 0;
-    }
+  .site_footer { 
+    padding-top: 0;
+  }
 }
 @media only screen and (min-width: 40em) and (max-width: 50em) {
   .site, .site_footer {
-    width: 90%;
     max-width: 45em;
     font-size: .85em;
-        padding-top: 76px;
-    }
-    .site_footer { 
-        padding-top: 0;
-    }
+    padding-top: 76px;
+  }
+  .site_footer { 
+    padding-top: 0;
+  }
+  header svg {
+    width: 70px;
+    height: 70px;
+  }
+  header a.calendar {
+    position: absolute;
+  }
+  header img.logo {
+    position: absolute;
+  }
 }
 @media only screen and (min-width: 30em) and (max-width: 70em) {
   .grid li {
-    width: 45%;
     margin-bottom: 4%;
+  }
+  header svg {
+    width: 70px;
+    height: 70px;
+  }
+  header a.calendar {
+    position: absolute;
+  }
+  header img.logo {
+    position: absolute;
   }
 }
 @media only screen and (max-width: 30em) {
@@ -341,6 +361,19 @@ footer {
     width: 100%;
     padding: 1em;
     margin-bottom: 5%;
+  }
+  header svg {
+    width: 70px;
+    height: 70px;
+  }
+  header a.calendar {
+    position: absolute;
+  }
+  header img.logo {
+    position: absolute;
+  }
+  button.apply {
+    width: 128px;
   }
 }
 @media only screen and (max-width: 40em) {
@@ -354,19 +387,18 @@ footer {
     padding: 1em;
   }
 
+  header svg {
+    width: 70px;
+    height: 70px;
+  }
+  header a.calendar {
+    position: absolute;
+  }
   header img.logo {
     position: absolute;
-    width: 140px;
-    padding-left: 10px;
   }
-
-  header h1.title {
-    font-size: 1.7em;
-  }
-
-  header svg {
-    position: absolute;
-    padding: 11px 27px 0px 0px;
+  button.apply {
+    width: 128px;
   }
 }
 @media print {
