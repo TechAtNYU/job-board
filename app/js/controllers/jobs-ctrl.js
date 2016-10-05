@@ -22,6 +22,13 @@ angular
                     $scope.filter.positionLevelFiltersToJobs[val.attributes.positionLevel] = [];
                 }
                 $scope.filter.positionLevelFiltersToJobs[val.attributes.positionLevel].push(val);
+                if (!val.attributes.category && val.attributes.categories) {
+                    val.attributes.category = "";
+                    val.attributes.categories.forEach(function (cat) {
+                        val.attributes.category += cat;
+                    });
+                }
+
             }).value();
             $scope.jobs = jobs;
         })
